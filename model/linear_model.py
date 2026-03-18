@@ -38,10 +38,7 @@ class LinearModel():
 			#ignore update of grad_w0 (bias term) since w0 does not contribute to regularization process
 			
 			if reg_type == 'l2':
-				# TODO: add l2 regularization term to grad_w
-				pass
-			elif reg_type == 'l1':
-				# TODO: add l1 regularization term to grad_w
+				grad_w+= 2*(reg_lambda/len(X_train))*self.W # (2 *lambda / m)* weight
 				pass
 
 			self.W-= lr*grad_w 
